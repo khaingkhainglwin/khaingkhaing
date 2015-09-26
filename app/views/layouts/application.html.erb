@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <title><%= full_title(yield(:title)) %></title>
@@ -10,9 +10,19 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
       </script>
     <![endif]-->
+    
 
   </head>
   <body>
+     <body>
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+ 
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <%= link_to "sample app", '#', id: "logo" %>
@@ -26,11 +36,9 @@
       </div>
 
     </header>
-    
-    <div class="container">
-      <%= yield %>
-      <%= debug(params) if Rails.env.development? %>
+   
 
-    </div>
   </body>
+
+
 </html>
