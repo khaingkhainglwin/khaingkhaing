@@ -11,20 +11,18 @@
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
 
-
-        <%= f.label :remember_me, class: "checkbox inline" do %>
+      <%= f.label :remember_me, class: "checkbox inline" do %>
         <%= f.check_box :remember_me %>
         <span>Remember me on this computer</span>
       <% end %>
-
 
       <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
 
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
   </div>
-
 </div>
+
 <footer class="footer">
   <small>
     The <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
@@ -32,10 +30,12 @@
   </small>
   <nav>
     <ul>
-       <li><a href="http://news.railstutorial.org/">About</a></li>
-        <li><a href="http://news.railstutorial.org/">Contact</a></li>
+            <li><a href="http://news.railstutorial.org/">About</a></li>
+
+      <li><a href="http://news.railstutorial.org/">Contact</a></li>
+
+      
       <li><a href="http://news.railstutorial.org/">News</a></li>
     </ul>
   </nav>
 </footer>
-
